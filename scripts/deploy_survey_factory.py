@@ -13,8 +13,6 @@ load_dotenv()
 
 oceanProviderUrl = "https://v4.provider.mumbai.oceanprotocol.com"
 contract_ocean_address = "0xd8992Ed72C445c35Cb4A2be468568Ed1079357c8"
-contract_token_address = "0xd8992Ed72C445c35Cb4A2be468568Ed1079357c8"
-OceanProtocolERC721FactoryAddress = "0x7d46d74023507d30ccc2d3868129fbe4e400e40b"
 OceanProtocolERC721FactoryAddress = "0x7d46d74023507d30ccc2d3868129fbe4e400e40b"
 chain_id = 80001
 wallet_address = os.getenv("WALLET_ADDRESS")

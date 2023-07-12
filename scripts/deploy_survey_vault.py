@@ -7,7 +7,7 @@ load_dotenv()
 
 contract_token_address = "0xd8992Ed72C445c35Cb4A2be468568Ed1079357c8"
 amount_token_to_give_by_per_cid= 10
-white_list_wallet_addresses_cid = ["0xFBeedbC9AaC1D3709002E21271fb1cF2Ade4d3C7","0xc56f81953b34E84dA930F395d458E910B5BC4a0f","0xa5cE499577a857fF42Ab1d012C4337aF002b4a48"]
+white_list_wallet_addresses_cid = ["wallet1", "wallet2", "wallet3"]
 chain_id = 80001
 wallet_address = os.getenv("WALLET_ADDRESS")
 private_key = os.getenv("PRIVATE_KEY")
