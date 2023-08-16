@@ -196,6 +196,7 @@ def published_on_ocean(w3, info_address_nft_token, vault_contract_address):
 
     DDO["id"] = "did:op:" + hashlib.sha256((w3.toChecksumAddress(info_address_nft_token[1]) + str(DDO["chainId"])).encode()).hexdigest()
     encryptedFiles = DataEncryptor.encrypt(objects_to_encrypt=assetUrl, provider_uri= oceanProviderUrl, chain_id=DDO["chainId"])
+    DDO["services"][0]["files"] = encryptedFiles.text
 
     _, proof = validate_ddo(DDO)
 
@@ -208,7 +209,6 @@ def published_on_ocean(w3, info_address_nft_token, vault_contract_address):
 
     ddo_string = json.dumps(DDO, separators=(",", ":"))
     metadataHash = hashlib.sha256(ddo_string.encode("utf-8")).hexdigest()
-    DDO["services"][0]["files"] = encryptedFiles.text
     encryptedDDO = DataEncryptor.encrypt(objects_to_encrypt=ddo_string.encode("utf-8"), provider_uri= oceanProviderUrl, chain_id=DDO["chainId"])
 
     with open("./contracts/abi/ERC721Abi.json") as f:
